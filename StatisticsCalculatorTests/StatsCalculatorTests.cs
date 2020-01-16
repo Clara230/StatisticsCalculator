@@ -1,17 +1,17 @@
-﻿
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using StatisticsCalculator;
+using StatisticsMean;
 
 
-
-namespace StatisticsCalculatorTests
+namespace StatisticsCalculator
 
 {
 
     [TestClass]
 
-    public class StatsCalculatorTests
+    public class StatsCalculator
+
 
     {
 
