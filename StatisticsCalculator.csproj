@@ -4,4 +4,13 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\CalculatorProject1\BasicCalculator\BasicCalculator.csproj" />
+    <ProjectReference Include="..\Helpers\Helpers\Helpers.csproj" />
+    <ProjectReference Include="..\IZScore\Calculator\StatsZScore.csproj" />
+    <ProjectReference Include="..\StatisticsMean\StatisticsMean\StatisticsMean.csproj" />
+    <ProjectReference Include="..\StatsStandardDev\StatsStandardDev\StatsStandardDev.csproj" />
+    <ProjectReference Include="..\StatsVariance\Calculator\StatsVariance.csproj" />
+  </ItemGroup>
+
 </Project>
