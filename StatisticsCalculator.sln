@@ -19,7 +19,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Add", "..\Sum\Add\Add.cspro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StatisticsMean", "..\StatisticsMean\StatisticsMean\StatisticsMean.csproj", "{B094AD7E-62DC-493B-984F-3702D9B8A3E3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StatisticsCalculatorTests", "StatisticsCalculatorTests\StatisticsCalculatorTests.csproj", "{67CCAD4C-4F4E-478A-86D6-08D3687F9E9C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StatisticsCalculatorTests1", "StatisticsCalculatorTests\StatisticsCalculatorTests1.csproj", "{67CCAD4C-4F4E-478A-86D6-08D3687F9E9C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

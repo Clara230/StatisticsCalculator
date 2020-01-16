@@ -1,55 +1,64 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 using StatisticsCalculator;
-using StatisticsMean;
+
+using System;
+
+using System.Collections.Generic;
+
+using System.Text;
+
+namespace StatisticsCalculator.Tests
 
 
-namespace StatisticsCalculator
 
 {
 
-    [TestClass]
+    [TestClass()]
 
-    public class StatsCalculator
-
+    public class StatCalculatorTests
 
     {
 
-        private readonly StatsCalculator statsCal = new StatsCalculator();
+        private readonly StatisticsCalculator statCalc = new StatisticsCalculator();
 
-        private readonly int[] values = { 2, 4, 6, 8 };
+        private readonly int[] values = { 1, 2, 3 };
 
-        private readonly int score = 3;
+        private readonly int score = 4;
 
-        private readonly double[] doubleVal = { 2.0, 3.0, 4.0 };
+        private readonly double[] doubleVal = { 2.1, 1.1 };
 
         private readonly double doubleScore = 2.2;
 
 
 
-        [TestMethod]
+        [TestMethod()]
 
-        public void FindMeanIntTest()
+        public void MeanIntTest()
 
         {
 
-            var mean = statsCal.Mean(values);
+            var mean = statCalc.Mean(values);
 
-            Assert.AreEqual(5, mean);
+            Assert.AreEqual(2, mean);
 
         }
 
-        [TestMethod()]
+
+
+        /*[TestMethod()]
 
         public void VarianceIntTest()
 
         {
 
-            var mean = statsCal.Variance(values);
+            var variance = statCalc.variance(values);
 
-            Assert.AreEqual(5, mean);
+            Assert.AreEqual(2, Helpers.Rounding.RoundFiveDecimals(variance));
 
-        }
+        }*/
+
+
 
         [TestMethod()]
 
@@ -57,11 +66,13 @@ namespace StatisticsCalculator
 
         {
 
-            var standDev = statsCal.StandardDev(values);
+            var standDev = statCalc.StandDev(values);
 
-            Assert.AreEqual(2.23607, Helpers.Rounding.RoundFiveDecimals(standDev));
+            Assert.AreEqual(0, Helpers.Rounding.RoundFiveDecimals(standDev));
 
         }
+
+
 
         [TestMethod()]
 
@@ -69,9 +80,9 @@ namespace StatisticsCalculator
 
         {
 
-            var z = statsCal.StatZScore(score, values);
+            var z = statCalc.ZScore(score, values);
 
-            Assert.AreEqual(-0.89443, Helpers.Rounding.RoundFiveDecimals(z));
+            Assert.AreEqual(0, Helpers.Rounding.RoundFiveDecimals(z));
 
         }
 
@@ -83,25 +94,25 @@ namespace StatisticsCalculator
 
         {
 
-            var mean = statsCal.Mean(doubleVal);
+            var mean = statCalc.Mean(doubleVal);
 
-            Assert.AreEqual(3, mean);
+            Assert.AreEqual(1.6, mean);
 
         }
 
 
 
-        [TestMethod()]
+        /*[TestMethod()]
 
         public void VarianceDoubleTest()
 
         {
 
-            var variance = statsCal.Variance(doubleVal);
+            var variance = statCalc.statsVariance(doubleVal);
 
-            Assert.AreEqual(0.66667, Helpers.Rounding.RoundFiveDecimals(variance));
+            Assert.AreEqual(2.09, Helpers.Rounding.RoundFiveDecimals(variance));
 
-        }
+        }*/
 
 
 
@@ -111,9 +122,9 @@ namespace StatisticsCalculator
 
         {
 
-            var standDev = statsCal.StandardDev(doubleVal);
+            var standDev = statCalc.StandDev(doubleVal);
 
-            Assert.AreEqual(0.81650, Helpers.Rounding.RoundFiveDecimals(standDev));
+            Assert.AreEqual(0.7071, Helpers.Rounding.RoundFiveDecimals(standDev));
 
         }
 
@@ -125,9 +136,9 @@ namespace StatisticsCalculator
 
         {
 
-            var z = statsCal.StatZScore(doubleScore, doubleVal);
+            var z = statCalc.ZScore(doubleScore, doubleVal);
 
-            Assert.AreEqual(-0.9798, Helpers.Rounding.RoundFiveDecimals(z));
+            Assert.AreEqual(5.3740, Helpers.Rounding.RoundFiveDecimals(z));
 
         }
 
